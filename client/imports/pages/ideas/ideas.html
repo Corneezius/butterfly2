@@ -1,14 +1,35 @@
-
-<!-- The header of the page. Will usually contain content that should be bounded to the top like navbar. -->
 <ion-header>
-  <!-- The content of the page. Will usually contain it's actual content like text. -->
-  <ion-navbar>
+  <ion-navbar color="whatsapp">
     <ion-title>
-      Ideas
+      Chats
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="add-chat-button">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+      <button ion-button icon-only class="options-button">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  Hello!
+<ion-content class="chats-page-content">
+  <ion-list class="chats">
+    <ion-item-sliding *ngFor="let chat of chats | async">
+      <button ion-item class="chat">
+        <img class="chat-picture" [src]="chat.picture">
+        <div class="chat-info">
+          <h2 class="chat-title">{{idea.title}}</h2>
+
+          <span *ngIf="chat.lastMessage" class="last-message">
+            <span class="last-message-timestamp">{{idea.createdAt }}</span>
+          </span>
+        </div>
+      </button>
+      <ion-item-options class="chat-options">
+        <button ion-button color="danger" class="option option-remove">Remove</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
