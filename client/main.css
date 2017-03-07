@@ -1,5 +1,4 @@
-/* CSS declarations go here */
-@import "imports/app/app";
-
 /*// Theme*/
 @import "imports/theme/variables";
+/* CSS declarations go here */
+@import "imports/app/app";
