@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import * as Moment from 'moment';
 import { Observable } from 'rxjs';
+import { Idea } from '../../../../imports/models';
 import template from './ideas.html';
 
 @Component({
   template
 })
 export class IdeasPage {
-  ideas: Observable<any[]>;
+  ideas: Observable<Idea[]>;
 
   constructor() {
     this.ideas = this.findIdeas();
   }
 
-  private findIdeas(): Observable<any[]> {
+  private findIdeas(): Observable<Idea[]> {
     return Observable.of([
         {
         _id: '0',
