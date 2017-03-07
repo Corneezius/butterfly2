@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-navbar color="whatsapp">
+  <ion-navbar color="dark">
     <ion-title>
-      Chats
+      Ideas
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only class="add-chat-button">
@@ -16,14 +16,11 @@
 
 <ion-content class="chats-page-content">
   <ion-list class="chats">
-    <ion-item-sliding *ngFor="let chat of chats | async">
+    <ion-item-sliding *ngFor="let idea of ideas | async">
       <button ion-item class="chat">
-        <img class="chat-picture" [src]="chat.picture">
         <div class="chat-info">
           <h2 class="chat-title">{{idea.title}}</h2>
-
-          <span *ngIf="chat.lastMessage" class="last-message">
-            <span class="last-message-timestamp">{{idea.createdAt }}</span>
+            <p><span class="last-message-timestamp">{{idea.createdAt }}</span></p>
           </span>
         </div>
       </button>
