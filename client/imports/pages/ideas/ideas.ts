@@ -19,7 +19,7 @@ export class IdeasPage {
         {
         _id: '0',
         title: 'Push a button and a gorilla comes',
-        createdAt: Moment().subtract(1, 'hours').toDate()
+        createdAt: Moment().subtract(1, 'hours').toDate();
         },
       {
         _id: '1',

@@ -9,7 +9,7 @@ import { MyApp } from './app.component';
     IdeasPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {tabsPlacement:'bottom'}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
