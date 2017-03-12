@@ -20,6 +20,8 @@ export class IdeasPage implements OnInit {
       .zone();
   }
 
+  
+
   removeIdea(idea: Idea): void {
      Ideas.remove({_id: idea._id}).subscribe(() => {});
    }
