@@ -1,9 +1,11 @@
-<form [formGroup]="addForm" (ngSubmit)="addParty()">
-  <label>Idea</label>
-  <input type="text" formControlName="idea">
-
-  <label>Author</label>
-  <input type="text" formControlName="description">
-
-  <button type="submit">Add</button>
-</form>
+<!-- <form [formGroup]="addForm" (ngSubmit)="addIdea()">
+  <ion-item>
+    <ion-label>Idea</ion-label>
+    <ion-input type="text" formControlName="title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Author</ion-label>
+    <ion-textarea formControlName="description"></ion-textarea>
+  </ion-item>
+  <button ion-button type="submit" [disabled]="!addForm.valid">Submit</button>
+</form> -->

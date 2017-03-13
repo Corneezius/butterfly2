@@ -2,11 +2,14 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { IdeasPage } from '../pages/ideas/ideas';
 import { MyApp } from './app.component';
+// import { NewIdeaComponent } from '../pages/ideas/new-idea';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    IdeasPage
+    IdeasPage,
+    // NewIdeaComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsPlacement:'bottom'}),
@@ -14,7 +17,8 @@ import { MyApp } from './app.component';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    IdeasPage
+    IdeasPage,
+    // NewIdeaComponent
   ],
   providers: [
   { provide: ErrorHandler, useClass: IonicErrorHandler }
