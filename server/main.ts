@@ -8,7 +8,7 @@ Meteor.startup(() => {
     let ideaId;
 
     ideaId = Ideas.collection.insert({
-      title: 'Push a button and a gorilla comes',
+      title: 'Push a button for tap dancing',
       createdAt: Moment().subtract(1, 'hours').toDate()
     });
 
@@ -24,12 +24,12 @@ Meteor.startup(() => {
 
 
     ideaId = Ideas.collection.insert({
-      title: 'An anthology about faith authored by a million people',
+      title: 'An anthology about faith',
       createdAt: Moment().subtract(1, 'hours').toDate()
     });
 
     ideaId = Ideas.collection.insert({
-      title: 'An app that challenges user to do kind things',
+      title: 'A boy who brings story to life',
       createdAt: Moment().subtract(1, 'hours').toDate()
     });
 
